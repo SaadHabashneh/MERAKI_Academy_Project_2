@@ -1,0 +1,77 @@
+/* styling the body */
+
+body {
+    margin: 0;
+}
+
+/* styling the header */
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #09ACDE;
+    font-family: Georgia;
+}
+
+/* styling nav div */
+
+nav {
+    background-color: #15f4ee;
+    padding: 0.3cm;
+}
+
+/* styling cursor on buttons */
+
+button:hover {
+    cursor: pointer;
+}
+
+/* styling nav search bar */
+
+#searchDiv {
+    float: right;
+}
+
+#searchBar {
+    border-radius: 1cm;
+    border-color: #09ACDE;
+}
+
+/* styling nav buttons */
+
+.navBtns {
+    border: none;
+    background-color: #15f4ee;
+}
+
+.navBtns:hover {
+    color: white;
+}
+
+/* styling dark button */
+
+#darkButton {
+    border: none;
+    border-radius: 1cm;
+    background-color: black;
+    color: white;
+}
+
+#darkButton:hover {
+    color: rgb(170, 34, 170);
+}
+
+/* styling genre div and it's buttons */
+
+#genreDiv {
+    background-color: rgb(170, 34, 170);
+}
+
+.genreBtns {
+    border: none;
+    background-color: rgb(170, 34, 170);
+}
+
+.genreBtns:hover {
+    color: white;
+}

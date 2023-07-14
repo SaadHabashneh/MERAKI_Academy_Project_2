@@ -24,3 +24,28 @@ const body = $("body");
 
 // declaring needed variables:-
 
+
+
+// selecting nav buttons:-
+
+const homeBtn = $("#homeBtn");
+const favBtn = $("#favs");
+const genreBtn = $("#genreBtn");
+const topBtn = $("#topRated");
+const dark = $("#darkButton");
+const searchBtn = $("#searchBtn");
+
+// selecting genre div and buttons:-
+
+const genreDiv = $("#genreDiv");
+genreDiv.hide();
+
+const actionBtn = $("#action");
+const comedyBtn = $("#comedy");
+const horrorBtn = $("#horror");
+const dramaBtn = $("#drama");
+
+// selecting main div:-
+
+const main = $("main");
+

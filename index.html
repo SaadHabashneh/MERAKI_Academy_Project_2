@@ -2,31 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>My Movies</title>
+    <link rel="icon" href="./images & icons/Film-icon.png">
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>My Movies</title>
 </head>
 <body>
     <header>
-        <h1>My Movies</h1>
+        <h3>My Movies</h3>
     </header>
-    <nav id="navbar">
-        <button>Fav Movies</button>
-        <button>Genre</button>
-        <button>Top Rated</button>
-        <button id="dark"></button>
+    <nav>
+        <div id="navButtons" style="display: inline;">
+            <button id="homeBtn" class="navBtns">Home</button>
+            <button id="favs" class="navBtns">Fav Movies</button>
+            <button id="genreBtn" class="navBtns">Genre</button>
+            <button id="topRated" class="navBtns">Top Rated</button>
+            <button id="darkButton">Dark Mode</button>
+        </div>
         <div id="searchDiv" style="display: inline;">
-            <input list="movies" name="movies" id="searchBar" placeholder="Search...">
+            <input list="movies" name="movies" id="searchBar" type="text" placeholder="type your movie...">
             <datalist id="movies">
                 
             </datalist>
-            <button id="searchBtn">search</button>
+            <button id="searchBtn" class="navBtns">search</button>
         </div>
     </nav>
+    <div id="genreDiv">
+        <button class="genreBtns" id="action">Action</button>
+        <button class="genreBtns" id="comedy">Comedy</button>
+        <button class="genreBtns" id="horror">Horror</button>
+        <button class="genreBtns" id="drama">Drama</button>
+    </div>
     <main id="home">
         
     </main>
-
     <script src="./main.js"></script>
 </body>
 </html>
