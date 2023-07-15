@@ -45,7 +45,104 @@ const comedyBtn = $("#comedy");
 const horrorBtn = $("#horror");
 const dramaBtn = $("#drama");
 
+// making the genre button function:-
+
+const genreSwitch = () => {
+    if (genreDiv.is(":visible")) {
+        genreDiv.hide(250);
+    }
+    else {
+        genreDiv.show(250);
+    }
+};
+
+genreBtn.on("click", genreSwitch);
+
 // selecting main div:-
 
 const main = $("main");
+
+// selecting movies divs:-
+
+const actionDiv = $("#actionM");
+
+const comedyDiv = $("#comedyM");
+
+const horrorDiv = $("#horrorM");
+
+const dramaDiv = $("#dramaM");
+
+// creating needed divs:-
+
+// fav movies div:-
+
+
+// each genre div:-
+
+// action div:-
+
+
+
+// comedy div:-
+
+
+
+// horror div:-
+
+
+
+// drama div:-
+
+
+
+// top rated div:-
+
+
+
+// searched div:-
+
+
+
+// description div:-
+
+
+
+// movies data:-
+
+const actionMovies = [
+{
+    id: 1,
+    movieName: "Sound of Freedom",
+    actors: ["Jim Caviezel", "Mira Sorvino", "Bill Camp", "Cristal Aparicio"],
+    imageSrc: "./images & icons/sound-of-freedom",
+    description: "The incredible true story of a former government agent turned vigilante who embarks on a dangerous mission to rescue hundreds of children from sex traffickers.",
+    rate: 4.3,
+},
+{
+    id: 2,
+    movieName: "Extraction II",
+    actors: ["Chris Hemsworth", "Golshifteh Farahani", "Adam Bessa", "Tornike Gogrichiani"],
+    imageSrc: "./images & icons/Extraction-2",
+    description: "After barely surviving his grievous wounds from his mission in Dhaka, Bangladesh, Tyler Rake is back, and his team is ready to take on their next mission.",
+    rate: 3.6,
+},
+{
+    id: 3,
+    movieName: "John Wick: Chapter 4",
+    actors: ["Keanu Reeves", "Laurence Fishburne", "George Georgiou", "Lance Reddick"],
+    imageSrc: "./images & icons/john-wick",
+    description: "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+    rate: 4,
+},
+{
+    id: 4,
+    movieName: " Top Gun: Maverick",
+    actors: ["Tom Cruise", "Jennifer Connelly", "Miles Teller", "Val Kilmer"],
+    imageSrc: "./images & icons/top-gun-maverick",
+    description: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+    rate: 4.3,
+}
+];
+// for the `imageSrc` it can use an array of url/path
+
 
