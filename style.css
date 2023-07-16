@@ -76,3 +76,50 @@ button:hover {
     color: white;
 }
 
+/* styling movie cards */
+
+.movieCards {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.movieCards h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.movieCards img {
+    width: 100%;
+    height: auto;
+}
+
+.movieCards button {
+    margin-top: 10px;
+    margin-left: 1cm;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #15f4ee;
+}
+
+.movieCards button:hover {
+    color: white;
+}
+
+/* styling stars */
+
+.rating {
+    font-size: 20px;
+}
+
+.rating span {
+    color: #ccc;
+}
+
+.rating span.filled {
+    color: gold;
+}
