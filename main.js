@@ -95,10 +95,10 @@ descriptionDiv.append(descriptionTitle);
 const trailer = $(`<a id="trailer">Watch Trailer</a>`);
 descriptionDiv.append(trailer);
 
-const actors = $(`<strong id="actors"></strong>`);
+const actors = $(`<strong id="actors" style="display: block"></strong>`);
 descriptionDiv.append(actors);
 
-const info = $(`<p id="movieInfo"></p>`);
+const info = $(`<strong id="movieInfo" style="display: block"></strong>`);
 descriptionDiv.append(info);
 
 const addFavBtn = $(`<button class="favDeleteBtn">Add to favorites</button>`);
@@ -274,10 +274,12 @@ const movies = [
 // creating description button:-
 
 const desButton = (i) => {
+    main.hide();
     descriptionTitle.text(movies[i].movieName);
     trailer.attr("href", `${movies[i].link}`);
+    trailer.attr("target", "_blank");
+    info.text(`Description: ${movies[i].description}`);
     actors.text(`Actors: ${movies[i].actors.join(", ")}`);
-    info.text(movies[i].description);
     descriptionDiv.show();
 };
 
@@ -298,7 +300,7 @@ const renderData = () => {
         rating.append(star);
     }
     movieCard.append(rating);
-    const category = $(`<span>Category: ${movie.category}</span>`)
+    const category = $(`<span>Category: ${movie.category}</span>`);
     movieCard.append(category);
     const desBtn = $(`<button class="cardButtons">See More</button>`);
     desBtn.on("click", () => desButton(i));

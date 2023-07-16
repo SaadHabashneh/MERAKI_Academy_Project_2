@@ -76,6 +76,13 @@ button:hover {
     color: white;
 }
 
+/* styling main div */
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* styling movie cards */
 
 .movieCards {
@@ -122,4 +129,25 @@ button:hover {
 
 .rating span.filled {
     color: gold;
+}
+
+/* styling description Div parts */
+
+#actors {
+    margin-top: 0.7cm;
+}
+
+#movieInfo {
+    margin-top: 0.7cm;
+}
+
+.favDeleteBtn {
+    margin-top: 0.7cm;
+    border: none;
+    border-radius: 5px;
+    background-color: #15f4ee;
+}
+
+.favDeleteBtn:hover {
+    color: white;
 }
