@@ -64,39 +64,44 @@ const main = $("main");
 
 // selecting movies divs:-
 
-const actionDiv = $("#actionM");
+const actionDiv = $("#actionDiv");
 
-const comedyDiv = $("#comedyM");
+const comedyDiv = $("#comedyDiv");
 
-const horrorDiv = $("#horrorM");
+const horrorDiv = $("#horrorDiv");
 
-const dramaDiv = $("#dramaM");
+const dramaDiv = $("#dramaDiv");
 
 // creating needed divs:-
 
 // fav movies div:-
 
+const favDiv = $(`<div id="favMovies"></div>`);
+body.append(favDiv);
+favDiv.hide();
 
-// each genre div:-
+// each genre function:-
 
-// action div:-
-
-
-
-// comedy div:-
-
-
-
-// horror div:-
+// action function:-
 
 
 
-// drama div:-
+// comedy function:-
+
+
+
+// horror function:-
+
+
+
+// drama function:-
 
 
 
 // top rated div:-
-
+const topRated = $(`<div id="topDiv"></div>`);
+body.append(topRated);
+topRated.hide();
 
 
 // searched div:-
@@ -105,9 +110,19 @@ const dramaDiv = $("#dramaM");
 
 // description div:-
 
+const descriptionDiv = $(`<div id="desDiv"></div>`);
+body.append(descriptionDiv);
+const descriptionTitle = $(`<h2 id="desTitle"></h2>`);
+descriptionDiv.append(descriptionTitle);
+const trailer = $(`<a href="" id="trailer">Watch Trailer</a>`);
+descriptionDiv.append(trailer);
+const actors = $(`<strong id="actors"></strong>`);
+descriptionDiv.append(actors);
+const info = $(`<p id="movieInfo"></p>`);
+descriptionDiv.append(info);
+descriptionDiv.hide();
 
-
-// movies data:-
+// action movies data:-
 
 const actionMovies = [
 {
