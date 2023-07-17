@@ -1,23 +1,3 @@
-/*
-the page loads on a 3 divs, header, nav & main, the header and nav are,
-fixed and the nav has 3 buttons and a search bar with its button and a,
-dark mode toggle button,the main has divs for as many movie cards i put,
-each one has 4 movie cards the buttons on the header are a home button,
-that returns him to hom div where ever the user are and a favMovies button,
-that shows the fav movies div that has the user's added movies and a,
-genre button that shows a small div that has buttons for each genre and,
-each button shows a div and that div's content depends on what button got,
-clicked and right to them a search bar that lets the user type the movie,
-he is searching for and when he selects a movie and presses the button,
-next to the search bar a new div shows with that movie only on it, on the,
-main div there are divs that hold 4 cards and they are flexed together,
-and in the user fav movies there is a after every movie that removes that,
-movie from his fav movies div, and if you click on the button under each,
-movie it shows a div with info about the movie including trailer link and,
-a description about it and the actors and a button that adds the movie to,
-the user's favMovies div.
-*/
-
 // selecting body:-
 
 const body = $("body");
@@ -83,7 +63,7 @@ descriptionDiv.append(actors);
 const info = $(`<strong id="movieInfo" style="display: block"></strong>`);
 descriptionDiv.append(info);
 
-const addFavBtn = $(`<button class="favDeleteBtn">Add to favorites</button>`);
+const addFavBtn = $(`<button class="favRemoveBtn">Add to favorites</button>`);
 descriptionDiv.append(addFavBtn);
 descriptionDiv.hide();
 
@@ -265,6 +245,48 @@ const homeButton = () => {
 
 homeBtn.on("click", homeButton);
 
+// 
+
+const favMovies = [];
+
+const renderFavMovies = ("click", () => {
+    favDiv.html("");
+    favMovies.forEach((movie, i) => {
+        const favMovieCard = $(`<div class="movieCards"></div>`);
+        const favMovieImg = $(`<img src="${movie.imageSrc}">`);
+        favMovieCard.append(favMovieImg);
+        const favMovieTitle = $(`<h4>${movie.movieName}</h4>`);
+        favMovieCard.append(favMovieTitle);
+        const favRate = $(`<div class="rating"></div>`);
+        for (let i = 1; i <= 5; i++) {
+            const favStar = $(`<span>☆</span>`);
+            if (i <= Math.round(movie.rate)) {
+                favStar.addClass("filled");
+            }
+            favRate.append(favStar);
+        }
+        favMovieCard.append(favRate);
+        const favCategory = $(`<span>Category: ${movie.category}</span>`);
+        favMovieCard.append(favCategory);
+        const remBtn = $(`<button class="cardButtons">Remove</button>`);
+        remBtn.on("click", () => {
+            favMovies.splice(i, 1);
+            renderFavMovies();
+        });
+        favMovieCard.append(remBtn);
+        favDiv.append(favMovieCard);
+    });
+});
+
+// creating fav movies button function:-
+
+favBtn.on("click", () => {
+    main.hide(250);
+    descriptionDiv.hide(250);
+    renderFavMovies();
+    favDiv.show(250);
+});
+
 // creating movie cards description button:-
 
 const desButton = (i) => {
@@ -274,6 +296,9 @@ const desButton = (i) => {
     trailer.attr("target", "_blank");
     info.text(`Description: ${movies[i].description}`);
     actors.text(`Actors: ${movies[i].actors.join(", ")}`);
+    addFavBtn.off("click").on("click", () => {
+        favMovies.push(movies[i]);
+    });
     descriptionDiv.show(250);
 };
 

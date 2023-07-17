@@ -141,13 +141,18 @@ button:hover {
     margin-top: 0.7cm;
 }
 
-.favDeleteBtn {
+.favRemoveBtn {
     margin-top: 0.7cm;
     border: none;
     border-radius: 5px;
     background-color: #15f4ee;
 }
 
-.favDeleteBtn:hover {
+.favRemoveBtn:hover {
     color: white;
+}
+
+#favMovies {
+    display: flex;
+    flex-wrap: wrap;
 }
