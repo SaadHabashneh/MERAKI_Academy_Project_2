@@ -95,7 +95,7 @@ const movies = [
     movieName: "Blade Runner 2049",
     actors: ["Harrison Ford", "Ryan Gosling", "Ana de Armas", "Dave Bautista"],
     imageSrc: "./images-icons/blade-runner.jpg",
-    description:"Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
+    description: "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
     rate: 4,
     link: "https://www.youtube.com/watch?v=gCcx85zbxz4",
     category:"Action",
@@ -105,7 +105,7 @@ const movies = [
     movieName: "Extraction II",
     actors: ["Chris Hemsworth","Golshifteh Farahani","Adam Bessa","Tornike Gogrichiani",],
     imageSrc: "./images-icons/Extraction-2.jpg",
-    description:"After barely surviving his grievous wounds from his mission in Dhaka, Bangladesh, Tyler Rake is back, and his team is ready to take on their next mission.",
+    description: "After barely surviving his grievous wounds from his mission in Dhaka, Bangladesh, Tyler Rake is back, and his team is ready to take on their next mission.",
     rate: 3.6,
     link: "https://www.youtube.com/watch?v=Y274jZs5s7s",
     category:"Action",
@@ -145,7 +145,7 @@ const movies = [
     movieName: "We're the Millers",
     actors: ["Jason Sudeikis", "Jennifer Aniston", "Emma Roberts", "Ed Helms"],
     imageSrc: "./images-icons/we're-the-millers.jpg",
-    description:"A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+    description: "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
     rate: 3.5,
     link: "https://www.youtube.com/watch?v=0Vsy5KzsieQ",
     category: "Comedy",
@@ -155,7 +155,7 @@ const movies = [
     movieName: "Puss in Boots: The Last Wish",
     actors: ["Antonio Banderas","Salma Hayek","Harvey Guillén","Florence Pugh",],
     imageSrc: "./images-icons/puss-in-boots.jpg",
-    description:"When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish.",
+    description: "When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish.",
     rate: 4,
     link: "https://www.youtube.com/watch?v=RqrXhwS33yc",
     category:"Comedy",
@@ -165,7 +165,7 @@ const movies = [
     movieName: "The Unbearable Weight of Massive Talent",
     actors: ["Nicolas Cage","Pedro Pascal","Tiffany Haddish","Sharon Horgan",],
     imageSrc: "./images-icons/unbearable-weight.jpg",
-    description:"Moviestar Nick Cage is channeling his iconic characters as he's caught between a superfan and a CIA agent.",
+    description: "Moviestar Nick Cage is channeling his iconic characters as he's caught between a superfan and a CIA agent.",
     rate: 3.5,
     link: "https://www.youtube.com/watch?v=x2YHPZMj8r4",
     category:"Comedy",
@@ -175,7 +175,7 @@ const movies = [
     movieName: "Insidious: The Red Door",
     actors: ["Ty Simpkins", "Patrick Wilson", "Rose Byrne", "Sinclair Daniel"],
     imageSrc: "./images-icons/insidious.jpg",
-    description:"The Lamberts must go deeper into The Further than ever before to put their demons to rest once and for all.",
+    description: "The Lamberts must go deeper into The Further than ever before to put their demons to rest once and for all.",
     rate: 3,
     link: "https://www.youtube.com/watch?v=ZuQuOnYnr3Q",
     category: "Horror",
@@ -185,7 +185,7 @@ const movies = [
     movieName: "M3gan",
     actors: ["Allison Williams","Violet McGraw","Ronny Chieng","Amie Donald",],
     imageSrc: "./images-icons/m3gan.jpg",
-    description:"A robotics engineer at a toy company builds a life-like doll that begins to take on a life of its own.",
+    description: "A robotics engineer at a toy company builds a life-like doll that begins to take on a life of its own.",
     rate: 3.2,
     link: "https://www.youtube.com/watch?v=BRb4U99OU80",
     category: "Horror",
@@ -195,7 +195,7 @@ const movies = [
     movieName: "Scream VI",
     actors: ["Courteney Cox","Melissa Barrera","Jenna Ortega","Jasmin Savoy Brown"],
     imageSrc: "./images-icons/scream-6.jpg",
-    description:"In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
+    description: "In the next installment, the survivors of the Ghostface killings leave Woodsboro behind and start a fresh chapter in New York City.",
     rate: 3.3,
     link: "https://www.youtube.com/watch?v=h74AXqw4Opc",
     category: "Horror",
@@ -205,7 +205,7 @@ const movies = [
     movieName: "Terrifier 2",
     actors: ["Lauren LaVera","David Howard Thornton","Elliott Fullam","Sarah Voigt",],
     imageSrc: "./images-icons/terrifier-2.jpg",
-    description:"After being resurrected by a sinister entity, Art the Clown returns to the timid town of Miles County where he targets a teenage girl and her younger brother on Halloween night.",
+    description: "After being resurrected by a sinister entity, Art the Clown returns to the timid town of Miles County where he targets a teenage girl and her younger brother on Halloween night.",
     rate: 3.1,
     link: "https://www.youtube.com/watch?v=6KkONLf_ZKU",
     category: "Horror",
@@ -215,7 +215,7 @@ const movies = [
     movieName: "Oppenheimer",
     actors: ["Cillian Murphy, Emily Blunt, Matt Damon, Robert Downey Jr."],
     imageSrc: "./images-icons/oppenheimer.jpg",
-    description:"The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+    description: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
     rate: 4,
     link: "https://www.youtube.com/watch?v=uYPbbksJxIg",
     category: "Drama",
@@ -225,7 +225,7 @@ const movies = [
     movieName: "Interstellar",
     actors: ["Matthew McConaughey, Anne Hathaway, Jessica Chastain, Mackenzie Foy",],
     imageSrc: "./images-icons/interstellar.jpg",
-    description:"When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+    description: "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
     rate: 4.6,
     link: "https://www.youtube.com/watch?v=zSWdZVtXT7E",
     category: "Drama",
@@ -235,7 +235,7 @@ const movies = [
     movieName: "The Shawshank Redemption",
     actors: ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"],
     imageSrc: "./images-icons/the-shawshank.jpg",
-    description:"Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+    description: "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
     rate: 4.8,
     link: "https://www.youtube.com/watch?v=NmzuHjWmXOc",
     category: "Drama",
@@ -245,7 +245,7 @@ const movies = [
     movieName: "Sound of Freedom",
     actors: ["Jim Caviezel", "Mira Sorvino", "Bill Camp", "Cristal Aparicio"],
     imageSrc: "./images-icons/sound-of-freedom.jpg",
-    description:"The incredible true story of a former government agent turned vigilante who embarks on a dangerous mission to rescue hundreds of children from sex traffickers.",
+    description: "The incredible true story of a former government agent turned vigilante who embarks on a dangerous mission to rescue hundreds of children from sex traffickers.",
     rate: 4.3,
     link: "https://www.youtube.com/watch?v=Rt0kp4VW1cI",
     category: "Drama",
@@ -338,12 +338,9 @@ topBtn.on("click", topMovies);
 // creating search button function:-
 
 const searchButton = () => {
-    const searchedMovies = movies.filter((movie) => {
-        if (movie.movieName === input.value) {
-            main.html("");
-            renderData(searchedMovies);
-        } 
-    });
+    const searchedMovies = movies.filter((movie) => movie.movieName.toLowerCase().includes(input.val().toLowerCase().trim()));
+    main.html("");
+    renderData(searchedMovies); 
 };
 
 searchBtn.on("click", searchButton);
