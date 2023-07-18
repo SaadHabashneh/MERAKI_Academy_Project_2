@@ -15,7 +15,7 @@ const searchBtn = $("#searchBtn");
 
 // selecting search bar:-
 
-const input = $("#searchBar");
+const searchInput = $("#searchBar");
 
 // selecting genre div and buttons:-
 
@@ -50,15 +50,20 @@ const toLoginBtn = $("#navLogin");
 const toRegBtn = $("#navReg");
 const loginForm = $("#loginForm");
 const regForm = $("#regForm");
+const loginValidationDiv = $("#loginValidationDiv");
+loginValidationDiv.hide();
+const regValidationDiv = $("#regValidationDiv");
+regValidationDiv.hide();
 
 const loginEmail = $("#loginEmail");
 const loginPass = $("#loginPass");
 const LoginBtn = $("#loginBtn");
+const loginMsg = $("#loginMsg");
 
-const regName = $("#regName");
 const regEmail = $("#regEmail");
 const regPass = $("#regPass");
 const regBtn = $("#regBtn");
+const regMsg = $("#regMsg");
 
 // creating needed divs:-
 
@@ -389,7 +394,7 @@ topBtn.on("click", topMovies);
 // creating search button function:-
 
 const searchButton = () => {
-    const searchedMovies = movies.filter((movie) => movie.movieName.toLowerCase().includes(input.val().toLowerCase().trim()));
+    const searchedMovies = movies.filter((movie) => movie.movieName.toLowerCase().includes(searchInput.val().toLowerCase().trim()));
     main.html("");
     renderData(searchedMovies); 
 };
@@ -399,6 +404,7 @@ searchBtn.on("click", searchButton);
 // creating to login form button function:-
 
 const toLoginForm = () => {
+    regDiv.hide(250);
     main.hide(250);
     descriptionDiv.hide(250);
     favDiv.hide(250);
@@ -419,5 +425,30 @@ const toRegForm = () => {
 
 toRegBtn.on("click", toRegForm);
 
+// creating users array of objects:-
+
+const users = [];
+
 // creating registry button function:-
+
+const registryBtn = (email, password) => {
+    email = regEmail.val();
+    password = regPass.val();
+    const usersObj = {};
+    for (let i = 0; i < users.length; i++) {
+        if (email === users[i]["email"]) {
+            regMsg.text("email is not available");
+            regMsg.css("color", "red");
+            regValidationDiv.show(200);
+        }
+    };
+    usersObj["email"] = email
+    usersObj["password"] = password
+    users.push(usersObj);
+    regMsg.text("Registration successful");
+    regMsg.css("color", "green");
+    regValidationDiv.show(200);
+};
+
+regBtn.on("click", registryBtn);
 

@@ -53,14 +53,17 @@
             </div>
             <div class="formInput">
                 <label for="loginEmail">Email:</label>
-                <input id="loginEmail" type="email" placeholder="email-name@xxx.com..." required>
+                <input id="loginEmail" type="email" placeholder="email-name@xxx.com..." pattern="[a-zA-z0-9._-]+@[a-zA-Z0-9.-]+/.[a-z]{2,}$" required>
             </div><br>
             <div class="formInput">
                 <label for="loginPass">Password:</label>
                 <input id="loginPass" type="password" placeholder="paSSw0rd..." pattern="[a-zA-z0-9]{8}" required>
             </div><br>
             <div class="formButton">
-                <button id="loginBtn" class="formButtons">Login</button>
+                <button type="submit" id="loginBtn" class="formButtons">Login</button>
+            </div>
+            <div id="loginValidationDiv">
+                <span id="loginMsg"></span>
             </div>
         </form>
     </section>
@@ -70,19 +73,18 @@
                 <h3>Create a new account</h3>
             </div>
             <div class="formInput">
-                <label for="regName">Name:</label>
-                <input id="regName" type="text" placeholder="Yourname..." required>
-            </div><br>
-            <div class="formInput">
                 <label for="regEmail">Email:</label>
-                <input id="regEmail" type="email" placeholder="email-name@xxx.com..." required>
+                <input id="regEmail" type="email" placeholder="email-name@xxx.com..." pattern="[a-zA-z0-9._-]+@[a-zA-Z0-9.-]+/.[a-z]{2,}$" required>
             </div><br>
             <div class="formInput">
                 <label for="regPass">Password:</label>
                 <input id="regPass" type="password" placeholder="paSSw0rd..." pattern="[a-zA-z0-9]{8}" required>
             </div><br>
             <div class="formButton">
-                <button id="regBtn" class="formButtons">Register</button>
+                <button type="submit" id="regBtn" class="formButtons">Register</button>
+            </div>
+            <div id="regValidationDiv">
+                <span id="regMsg"></span>
             </div>
         </form>
     </section>
