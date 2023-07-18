@@ -47,14 +47,13 @@ const regDiv = $("#regDiv");
 regDiv.hide();
 
 const toLoginBtn = $("#navLogin");
-
-const login = $("#loginForm");
-const reg = $("#regForm");
+const toRegBtn = $("#navReg");
+const loginForm = $("#loginForm");
+const regForm = $("#regForm");
 
 const loginEmail = $("#loginEmail");
 const loginPass = $("#loginPass");
 const LoginBtn = $("#loginBtn");
-const toReg = $("#toReg");
 
 const regName = $("#regName");
 const regEmail = $("#regEmail");
@@ -308,6 +307,8 @@ const renderFavMovies = ("click", () => {
 favBtn.on("click", () => {
     main.hide(250);
     descriptionDiv.hide(250);
+    loginDiv.hide(250);
+    regDiv.hide(250);
     renderFavMovies();
     favDiv.show(250);
 });
@@ -395,5 +396,28 @@ const searchButton = () => {
 
 searchBtn.on("click", searchButton);
 
-// creating login form button function:-
+// creating to login form button function:-
+
+const toLoginForm = () => {
+    main.hide(250);
+    descriptionDiv.hide(250);
+    favDiv.hide(250);
+    loginDiv.show(250);
+};
+
+toLoginBtn.on("click", toLoginForm);
+
+// creating to register form button function:-
+
+const toRegForm = () => {
+    loginDiv.hide(250);
+    main.hide(250);
+    descriptionDiv.hide(250);
+    favDiv.hide(250);
+    regDiv.show(250);
+};
+
+toRegBtn.on("click", toRegForm);
+
+// creating registry button function:-
 

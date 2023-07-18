@@ -206,18 +206,3 @@ button:hover {
     color: white;
 }
 
-#regLabel {
-    margin-right: 0.45cm;
-}
-
-#toReg {
-    margin-right: 3cm;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #15f4ee;
-}
-
-#toReg:hover {
-    color: white;
-}
