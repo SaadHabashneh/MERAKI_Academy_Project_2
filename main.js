@@ -38,6 +38,29 @@ genreBtn.on("click", genreSwitch);
 
 const main = $("main");
 
+// selecting login, register divs, their buttons and their forms:-
+
+const loginDiv = $("#loginDiv");
+loginDiv.hide();
+
+const regDiv = $("#regDiv");
+regDiv.hide();
+
+const toLoginBtn = $("#navLogin");
+
+const login = $("#loginForm");
+const reg = $("#regForm");
+
+const loginEmail = $("#loginEmail");
+const loginPass = $("#loginPass");
+const LoginBtn = $("#loginBtn");
+const toReg = $("#toReg");
+
+const regName = $("#regName");
+const regEmail = $("#regEmail");
+const regPass = $("#regPass");
+const regBtn = $("#regBtn");
+
 // creating needed divs:-
 
 // fav movies div:-
@@ -236,6 +259,8 @@ const movies = [
 // creating home button function:-
 
 const homeButton = () => {
+    loginDiv.hide(250);
+    regDiv.hide(250);
     descriptionDiv.hide(250);
     favDiv.hide(250);
     main.html("");
@@ -369,3 +394,6 @@ const searchButton = () => {
 };
 
 searchBtn.on("click", searchButton);
+
+// creating login form button function:-
+

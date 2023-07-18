@@ -143,6 +143,7 @@ button:hover {
 
 .favRemoveBtn {
     margin-top: 0.7cm;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     background-color: #15f4ee;
@@ -155,4 +156,68 @@ button:hover {
 #favMovies {
     display: flex;
     flex-wrap: wrap;
+}
+
+/* styling login and registry forms */
+
+#loginDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#regDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.forms {
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.formInput {
+    display: flex;
+    justify-content: center;
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+}
+
+.formButtons {
+    margin-top: 0.7cm;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #15f4ee;
+}
+
+.formButtons:hover {
+    color: white;
+}
+
+#regLabel {
+    margin-right: 0.45cm;
+}
+
+#toReg {
+    margin-right: 3cm;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #15f4ee;
+}
+
+#toReg:hover {
+    color: white;
 }
