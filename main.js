@@ -468,6 +468,12 @@ regBtn.on("click", registryBtn);
 const loggingInBtn = (email, password) => {
     email = loginEmail.val();
     password = loginPass.val();
+    if (email === "" || password === "") {
+        loginMsg.text("You must fill the input fields");
+        loginMsg.css("color", "red");
+        loginValidationDiv.show(200);
+        return
+    };
     for (let i = 0; i < users.length; i++) {
         if (email === users[i].email && password === users[i].password) {
             loginMsg.text("Login successful");
