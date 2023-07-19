@@ -434,13 +434,20 @@ const users = [];
 const registryBtn = (email, password) => {
     email = regEmail.val();
     password = regPass.val();
+    if (email === "" || password === "") {
+        regMsg.text("You must fill the input fields");
+        regMsg.css("color", "red");
+        regValidationDiv.show(200);
+        return
+    };
     const usersObj = {};
     for (let i = 0; i < users.length; i++) {
-        if (email !== users[i].email) {
-            regMsg.text("email is not available");
+        if (email === users[i].email) {
+            regMsg.text("Email is taken");
             regMsg.css("color", "red");
             regValidationDiv.show(200);
-        }
+            return 
+        };
     };
     usersObj.email = email
     usersObj.password = password
@@ -449,6 +456,10 @@ const registryBtn = (email, password) => {
     regMsg.css("color", "green");
     regValidationDiv.show(200);
     console.log(users);
+    setTimeout(() => {
+        regDiv.hide(200);
+        loginDiv.show(200);
+    }, 1000);
 };
 
 regBtn.on("click", registryBtn);
@@ -463,7 +474,13 @@ const loggingInBtn = (email, password) => {
             loginMsg.text("Login successful");
             loginMsg.css("color", "green");
             loginValidationDiv.show(200);
-        }
+            setTimeout(() => {
+                loginDiv.hide(200);
+                main.show(200);
+                renderData(movies);
+            }, 1000);
+            return
+        };
     };
     loginMsg.text("account doesn't exist, have you registered?");
     loginMsg.css("color", "red");
