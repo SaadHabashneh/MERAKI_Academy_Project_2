@@ -57,7 +57,7 @@ regValidationDiv.hide();
 
 const loginEmail = $("#loginEmail");
 const loginPass = $("#loginPass");
-const LoginBtn = $("#loginBtn");
+const loginBtn = $("#loginBtn");
 const loginMsg = $("#loginMsg");
 
 const regEmail = $("#regEmail");
@@ -436,19 +436,38 @@ const registryBtn = (email, password) => {
     password = regPass.val();
     const usersObj = {};
     for (let i = 0; i < users.length; i++) {
-        if (email === users[i]["email"]) {
+        if (email !== users[i].email) {
             regMsg.text("email is not available");
             regMsg.css("color", "red");
             regValidationDiv.show(200);
         }
     };
-    usersObj["email"] = email
-    usersObj["password"] = password
+    usersObj.email = email
+    usersObj.password = password
     users.push(usersObj);
     regMsg.text("Registration successful");
     regMsg.css("color", "green");
     regValidationDiv.show(200);
+    console.log(users);
 };
 
 regBtn.on("click", registryBtn);
 
+// creating login check function:-
+
+const loggingInBtn = (email, password) => {
+    email = loginEmail.val();
+    password = loginPass.val();
+    for (let i; i < users.length; i++) {
+        if (email === users[i].email && password === users.password) {
+            loginMsg.text("Login successful");
+            loginMsg.css("color", "green");
+            loginValidationDiv.show(200);
+        }
+    };
+    loginMsg.text("account doesn't exist, have you registered?");
+    loginMsg.css("color", "red");
+    loginValidationDiv.show(200);
+};
+
+loginBtn.on("click", loggingInBtn);
