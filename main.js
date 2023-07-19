@@ -455,7 +455,6 @@ const registryBtn = (email, password) => {
     regMsg.text("Registration successful");
     regMsg.css("color", "green");
     regValidationDiv.show(200);
-    console.log(users);
     setTimeout(() => {
         regDiv.hide(200);
         loginDiv.show(200);
@@ -469,8 +468,8 @@ regBtn.on("click", registryBtn);
 const loggingInBtn = (email, password) => {
     email = loginEmail.val();
     password = loginPass.val();
-    for (let i; i < users.length; i++) {
-        if (email === users[i].email && password === users.password) {
+    for (let i = 0; i < users.length; i++) {
+        if (email === users[i].email && password === users[i].password) {
             loginMsg.text("Login successful");
             loginMsg.css("color", "green");
             loginValidationDiv.show(200);
