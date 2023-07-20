@@ -10,7 +10,6 @@ const homeBtn = $("#homeBtn");
 const favBtn = $("#favs");
 const genreBtn = $("#genreBtn");
 const topBtn = $("#topRated");
-const dark = $("#darkButton");
 const searchBtn = $("#searchBtn");
 
 // selecting search bar:-

@@ -48,19 +48,6 @@ button:hover {
     color: white;
 }
 
-/* styling dark button */
-
-#darkButton {
-    border: none;
-    border-radius: 1cm;
-    background-color: black;
-    color: white;
-}
-
-#darkButton:hover {
-    color: rgb(170, 34, 170);
-}
-
 /* styling genre div and it's buttons */
 
 #genreDiv {
