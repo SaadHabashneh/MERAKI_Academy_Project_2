@@ -276,10 +276,9 @@ homeBtn.on("click", homeButton);
 
 // creating the fav movies function:- 
 
-const favMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-
 const renderFavMovies = ("click", () => {
     favDiv.html("");
+    const favMovies = users[currentUserIndex].favorites;
     favMovies.forEach((movie, i) => {
         const favMovieCard = $(`<div class="movieCards"></div>`);
         const favMovieImg = $(`<img src="${movie.imageSrc}">`);
@@ -300,7 +299,8 @@ const renderFavMovies = ("click", () => {
         const remBtn = $(`<button class="cardButtons">Remove</button>`);
         remBtn.on("click", () => {
             favMovies.splice(i, 1);
-            localStorage.setItem("favMovies", JSON.stringify(favMovies));
+            users[currentUserIndex].favorites = favMovies;
+            localStorage.setItem("users", JSON.stringify(users));
             renderFavMovies();
         });
         favMovieCard.append(remBtn);
@@ -329,8 +329,10 @@ const desButton = (i) => {
     info.text(`Description: ${movies[i].description}`);
     actors.text(`Actors: ${movies[i].actors.join(", ")}`);
     addFavBtn.off("click").on("click", () => {
+        const favMovies = users[currentUserIndex].favorites;
         favMovies.push(movies[i]);
-        localStorage.setItem("favMovies", JSON.stringify(favMovies));
+        users[currentUserIndex].favorites = favMovies;
+        localStorage.setItem("users", JSON.stringify(users));
     });
     descriptionDiv.show(250);
 };
@@ -454,6 +456,7 @@ const registryBtn = (email, password) => {
     };
     usersObj.email = email
     usersObj.password = password
+    usersObj.favorites = [];
     users.push(usersObj);
     localStorage.setItem("users", JSON.stringify(users));
     regMsg.text("Registration successful");
@@ -469,6 +472,10 @@ regBtn.on("click", registryBtn);
 
 // creating login check function:-
 
+// creating a variable to store the index of the logged-in user:-
+
+let currentUserIndex;
+
 const loggingInBtn = (email, password) => {
     email = loginEmail.val();
     password = loginPass.val();
@@ -480,6 +487,7 @@ const loggingInBtn = (email, password) => {
     };
     for (let i = 0; i < users.length; i++) {
         if (email === users[i].email && password === users[i].password) {
+            currentUserIndex = i;
             loginMsg.text("Login successful");
             loginMsg.css("color", "green");
             loginValidationDiv.show(200);
