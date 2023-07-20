@@ -274,9 +274,9 @@ const homeButton = () => {
 
 homeBtn.on("click", homeButton);
 
-// 
+// creating the fav movies function:- 
 
-const favMovies = [];
+const favMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
 
 const renderFavMovies = ("click", () => {
     favDiv.html("");
@@ -300,6 +300,7 @@ const renderFavMovies = ("click", () => {
         const remBtn = $(`<button class="cardButtons">Remove</button>`);
         remBtn.on("click", () => {
             favMovies.splice(i, 1);
+            localStorage.setItem("favMovies", JSON.stringify(favMovies));
             renderFavMovies();
         });
         favMovieCard.append(remBtn);
@@ -329,11 +330,13 @@ const desButton = (i) => {
     actors.text(`Actors: ${movies[i].actors.join(", ")}`);
     addFavBtn.off("click").on("click", () => {
         favMovies.push(movies[i]);
+        localStorage.setItem("favMovies", JSON.stringify(favMovies));
     });
     descriptionDiv.show(250);
 };
 
 // creating movies cards and their buttons:-
+
 const renderData = (movies) => {
     movies.forEach((movie, i) => {
     const movieCard = $(`<div class="movieCards"></div>`);
@@ -427,7 +430,7 @@ toRegBtn.on("click", toRegForm);
 
 // creating users array of objects:-
 
-const users = [];
+const users = JSON.parse(localStorage.getItem("users")) || [];
 
 // creating registry button function:-
 
@@ -452,6 +455,7 @@ const registryBtn = (email, password) => {
     usersObj.email = email
     usersObj.password = password
     users.push(usersObj);
+    localStorage.setItem("users", JSON.stringify(users));
     regMsg.text("Registration successful");
     regMsg.css("color", "green");
     regValidationDiv.show(200);
